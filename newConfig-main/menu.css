@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+}
+
+.logo_container {
+  display: flex;
+  justify-content: center;
+  margin: -15px 0 20px 0;
+}
+
+.logo_container img {
+ width: 130px;
+}
+
+.shopping_cart {
+  z-index: 999;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.leave_container {
+  margin: 5px 0 0px 0px;
+}
+
+.leave_container img {
+  cursor: pointer;
+}
+
+.app_container {
+  width: 100%;
+  height: 100%;
+}
+
+.app_layout {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.app_menu {
+  width: 35%;
+  padding: 20px;
+  border: 1px solid #404040;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.app_menu_inner {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.app_canvas {
+  width: 100%;
+}
+
+.progress-steps {
+  width: 350px;
+}
+.progress-steps .top {
+  margin-bottom: 30px;
+  position: relative;
+}
+.progress-steps .top .progress {
+  width: 100%;
+  height: 3px;
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.progress-steps .top .progress span {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #2dd4bf;
+  transition: 0.5s;
+}
+.progress-steps .top .steps {
+  display: flex;
+  justify-content: space-between;
+}
+.progress-steps .top .steps .step {
+  background-color: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.progress-steps .top .steps .step.active {
+  border-color: #2dd4bf;
+  transition: border 1s;
+}
+
+.progress-steps .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.pos_buttons {
+  position: absolute;
+  bottom: 5%;
+}
+
+.progress-steps .buttons .btn {
+  outline: 0px;
+  border: 0px;
+  padding: 10px 25px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #2dd4bf;
+  font-weight: bold;
+  color: white;
+  transition: color 0.5s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-steps .buttons .btn.disabled {
+  background-color: #e0e0e0;
+  color: #bdbdbd;
+  cursor: no-drop;
+}
+
+.main_menu_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main_menu_content button {
+  outline: 0px;
+  border: 0px;
+  width: 180px;
+  padding: 10px 25px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #2dd4bf;
+  font-weight: bold;
+  color: white;
+  transition: color 0.5s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  border: .5px solid #334155;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-bottom: 5%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-weight: 100;
+}
+
+input:focus {
+  outline: 1px solid #38bdf8;
+  font-size: 1.1rem;
+}
+
+.app_canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#warningMessage {
+  color: red;
+  font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: .9rem;
+}
+
+#flaeche {
+  color: black;
+  margin: 2rem 0 2rem 0;
+  font-weight: 100;
+  font-size: 1.1rem;
+}
+
+.app_menu_colors {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-left: 20px;
+  width: 220px; 
+}
+
+.color_menu_inner {
+  display: flex;
+  gap: 10px;
+}
+
+.app_menu_colors img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.next_step_btn {
+  margin: 40px 0 0 30px;
+}
+
+.menu_colors_inner img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.second_menu_overview {
+  display: none;
+}
+
+.second_menu_overview table {
+  width: 100%;
+  margin-top: 20%;
+  border-collapse: collapse;
+}
+
+.second_menu_overview th, .second_menu_overview td {
+  padding: 10px;
+  text-align: left !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.second_menu_overview td {
+  font-size: .9rem;
+}
+
+.second_menu_overview th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.second_menu_overview tr:hover {
+  background-color: #eaeaea;
+}
+
+
+

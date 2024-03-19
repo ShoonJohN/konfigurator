@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="menu.css" />
+    <title>KONFIGURATOR</title>
+  </head>
+  <body>
+    <main>
+      <div class="shopping_cart">
+        <img
+          src="/files/icons/Shop--Streamline-Guidance.svg"
+          alt="shopping cart icon"
+          title="Einkaufswagen"
+        />
+      </div>
+      <div class="app_container">
+        <div class="app_layout">
+          <div class="app_menu">
+            <div class="leave_container">
+              <img
+                src="/files/icons/Login-1--Streamline-Ultimate.svg"
+                alt="Home icon"
+                title="Startseite"
+              />
+            </div>
+            <div class="logo_container">
+              <img
+                src="files/ace-media/AceCustomsLogo_1.png"
+                alt=""
+              />
+            </div>
+            <div class="app_menu_inner">
+              <div class="progress-steps">
+                <div class="top">
+                  <div class="progress"><span></span></div>
+                  <div class="steps">
+                    <div class="step active" data-step="1"><span>1</span></div>
+                    <div class="step" data-step="2"><span>2</span></div>
+                  </div>
+                </div>
+                <div id="mainMenuContent" class="main_menu_content">
+                  <h2>Ihre Maße</h2>
+                  <input
+                    type="text"
+                    id="breite"
+                    placeholder="Breite"
+                    min="1"
+                    max="25"
+                  />
+                  <input
+                    type="text"
+                    id="tiefe"
+                    placeholder="Tiefe"
+                    min="1"
+                    max="25"
+                  />
+                  <div id="warningMessage"></div>
+                  <div id="flaeche">Fläche: 0 m²</div>
+                  <button id="generateTiles">Fliesen generieren</button>
+                  <div class="menu_colors">
+                    <h2>Farben</h2>
+                    <div class="menu_colors_inner">
+                      <img src="/files/icons/icon_race_weiss.svg" alt="" />
+                      <img
+                        src="/files/icons/icon_race_flat_dunkelgrau.svg"
+                        alt=""
+                      />
+                      <img src="/files/icons/icon_race_schwarz.svg" alt="" />
+                      <img src="/files/icons/icon_race_reflexblau.svg" alt="" />
+                      <img src="/files/icons/icon_race_hellblau.svg" alt="" />
+                      <img src="/files/icons/icon_race_gelb-gruen.svg" alt="" />
+                      <img src="/files/icons/icon_race_gelb.svg" alt="" />
+                      <img src="/files/icons/icon_race_pink.svg" alt="" />
+                      <img src="/files/icons/icon_race_rot.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div id="second_menu_overview" class="second_menu_overview">
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Produkt</th>
+                              <th>Anzahl</th>
+                              <th>Preis</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>TILE NAME/FARBE</td>
+                              <td>111</td>
+                              <td>€€€</td>
+                          </tr>
+                          <tr>
+                            <td>TILE NAME/FARBE</td>
+                            <td>111</td>
+                            <td>€€€</td>
+                        </tr>
+                        <tr>
+                          <td>TILE NAME/FARBE</td>
+                          <td>111</td>
+                          <td>€€€</td>
+                      </tr>
+                    
+                      </tbody>
+                  </table>
+                </div>
+                <div class="buttons">
+                  <div class="pos_buttons">
+                    <button class="btn btn-prev disabled" disabled>
+                      Zurück
+                    </button>
+                    <button class="btn btn-next">Weiter</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app_canvas">
+            <canvas id="canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="menu.js"></script>
+  </body>
+</html>
